@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//MATERI 1
+
+
 //-----> Blade
 
 // Route::get('/Home', function(){
@@ -37,3 +40,16 @@ Route::get('/Register', 'AuthController@Register');
 Route::get('/Welcome/{firstname}/{lastname}', 'AuthController@Welcome');
 //buat nama diform register
 Route::post('/Welcome', 'AuthController@Welcome_post');
+
+
+
+//MATERI 2
+
+
+Route::get('/', function(){
+	return view('/MateriKedua/table');
+});
+
+Route::get('/data-tables', function(){
+	return view('/MateriKedua/datatables');
+});
