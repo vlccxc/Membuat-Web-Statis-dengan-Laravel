@@ -20,17 +20,17 @@ Route::get('/', function () {
 
 //-----> Blade
 
-// Route::get('/Home', function(){
-// 	return view('index');
-// });
+Route::get('/Home', function(){
+	return view('index');
+});
 
-// Route::get('/Register', function(){
-// 	return view('form');
-// });
+Route::get('/Register', function(){
+	return view('form');
+});
 
-// Route::get('/Welcome', function(){
-// 	return view('welcomes');
-// });
+Route::get('/Welcome', function(){
+	return view('welcomes');
+});
 
 //-----> Controller
 
@@ -53,3 +53,16 @@ Route::get('/', function(){
 Route::get('/data-tables', function(){
 	return view('/MateriKedua/datatables');
 });
+
+
+
+//MATERI 4
+
+
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+Route::post('/pertanyaan', 'PertanyaanController@store');
+Route::get('/pertanyaan', 'PertanyaanController@index');
+Route::get('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@show');
+Route::get('/pertanyaan/{pertanyaan_id}/edit', 'PertanyaanController@edit');
+Route::put('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@update');
+Route::delete('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@destroy');
