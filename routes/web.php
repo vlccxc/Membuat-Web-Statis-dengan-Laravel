@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//MATERI 1
+//MATERI 1 CONTROLLER
 
 
 //-----> Blade
@@ -43,7 +43,7 @@ Route::post('/Welcome', 'AuthController@Welcome_post');
 
 
 
-//MATERI 2
+//MATERI 2 MIGRATION
 
 
 Route::get('/', function(){
@@ -56,13 +56,19 @@ Route::get('/data-tables', function(){
 
 
 
-//MATERI 4
+//MATERI 4 CRUD
 
 
-Route::get('/pertanyaan/create', 'PertanyaanController@create');
-Route::post('/pertanyaan', 'PertanyaanController@store');
-Route::get('/pertanyaan', 'PertanyaanController@index');
-Route::get('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@show');
-Route::get('/pertanyaan/{pertanyaan_id}/edit', 'PertanyaanController@edit');
-Route::put('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@update');
-Route::delete('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@destroy');
+// Route::get('/pertanyaan/create', 'PertanyaanController@create');
+// Route::post('/pertanyaan', 'PertanyaanController@store');
+// Route::get('/pertanyaan', 'PertanyaanController@index');
+// Route::get('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@show');
+// Route::get('/pertanyaan/{pertanyaan_id}/edit', 'PertanyaanController@edit');
+// Route::put('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@update');
+// Route::delete('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@destroy');
+
+
+
+//MATERI 5 MODEL
+
+Route::resource('/pertanyaan', 'PertanyaanController');
